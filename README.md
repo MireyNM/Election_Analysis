@@ -210,9 +210,9 @@ When we run the code the candidate and county election results were printed in t
 </p>
 
 <p align="center">
- Fig. 1: andidate and county election results printed in Terminal     
+ Fig. 1: Candidate and county election results printed in Terminal     
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
- Fig. 2: andidate and county election results printed in text.file  
+ Fig. 2: Candidate and county election results printed in text.file  
 </p>
 
 <br /> 
