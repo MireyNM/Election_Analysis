@@ -5,10 +5,17 @@
 import csv
 import os
 
-# Add a variable to load a file from a path.
-file_to_load = os.path.join("Resources", "election_results.csv")
+# Add a variable to load a file from provided path.
+print("Drag the file to Analyse:")
+file_to_load = input()
+#remove extra ' if found in the path
+if file_to_load[0] == "'":
+    file_to_load = file_to_load[1:-1]
+# name the file to save according to loaded file
+file_to_save_name = file_to_load.split("/")[-1].split(".")[0]
+
 # Add a variable to save the file to a path.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+file_to_save = os.path.join("analysis", file_to_save_name+"_analysis.txt")
 
 # Initialize a total vote counter.
 total_votes = 0
