@@ -240,11 +240,34 @@ The analysis of the election shows that:
 ## Election-Audit Summary    
 The analysis of the election data with Python allows us to complete the election audit successfully. Thus, we can say that automating the process of the audit using Python should be taken into consideration. 
 
-However, I would suggest few modifications to the code in order to be more efficient for any election.  
+However, I would suggest few modifications to the code in order to be more efficient for any election file.  
  
-1. Abstraction: We need to make sure that the code is as abstract as possible so it could be used with any election data file. I would suggest make it easier for the user by writing a code allowing the user to drag and drop the election data file.
+1. **Dynamic approach:** We need to make sure that the code is as abstract as possible so it could be used with any election data file. I would suggest make it easier for the user by adding to the code the following:
+- Give the user the ability to drag and drop the election file.
+- Generate analysis file based on the file that the user has dragged. 
 
-2. Visualize the data: Data visualization will help in understanding the results in an easier and faster way. If we have more data (more candidates and county), it will take more than 10 minutes for us to read who won the election. While if we use a bar graph, per examples, in our output results it will take us few seconds to spot the highest bar and the name of the winner candidate.  
+2. **Visualize the data:** Data visualization will help in understanding the results in an easier and faster way. If we have more data (more candidates and counties), it will take more than 10 minutes for us to read who won the election. While if we use a bar graph, per examples, in our output results it will take us few seconds to spot the highest bar and the name of the winner candidate. 
+
+Please check the modified code "PyPoll_Challenge.py" in the new branch named dynamic: <br /> 
+https://github.com/MireyNM/Election_Analysis-/tree/dynamic
+
+### Challenges 
+While going through the suggestions I mentioned above, I have faced the following challenges.:
+
+1-  I noticed that when dragging the file an extra "'" was added to the file name therefore I removed it by adding the following to the code. 
+
+```
+if file_to_load[0] == "'":
+    file_to_load = file_to_load[1:-1]
+```
+
+2- I have tried to visualize the election results in bar charts. However, to be able to do that I should import the matplptlib module ```import matplotlib.pyplot as plt``` which gave this error ```ModuleNotFoundError: No module named 'matplotlib'```. It seems the module I need to draw charts doesn't exist to my Python version. The solution should be to install pip. More work and research are needed to be able to fix this issue.
+
+
+
+
+
+ 
 
 
     
