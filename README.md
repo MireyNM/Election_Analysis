@@ -204,9 +204,9 @@ with open(file_to_save, "w") as txt_file:
 When we run the code the candidate and county election results were printed in the terminal (See Fig.1) as well as in the "election_analysis.txt” that we have already created (See Fig.2).
 
 <p align="center">
-  <img alt="Light" src="https://user-images.githubusercontent.com/109363759/189444150-9d9a6cdc-17a2-439f-bcb1-fbb1af8d86cf.png" width="45%"> 
+  <img alt="Light" src="https://user-images.githubusercontent.com/109363759/189509343-7b760956-7117-4298-96fe-81f2d39bf6be.png" width="45%"> 
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="https://user-images.githubusercontent.com/109363759/189444167-d71611cd-0715-4138-848e-8af004511f6a.png" width="45%">
+  <img alt="Dark" src="https://user-images.githubusercontent.com/109363759/189444167-d71611cd-0715-4138-848e-8af004511f6a.png" width="50%">
 </p>
 
 <p align="center">
@@ -214,6 +214,7 @@ When we run the code the candidate and county election results were printed in t
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
  Fig. 2: Candidate and county election results printed in text.file  
 </p>
+
 
 <br /> 
 
@@ -242,7 +243,7 @@ The analysis of the election data with Python allows us to complete the election
 
 However, I would suggest few modifications to the code in order to be more efficient for any election file.  
  
-1. **Dynamic approach:** We need to make sure that the code is as abstract as possible so it could be used with any election data file. I would suggest make it easier for the user by adding to the code the following:
+1. **Dynamic approach:** We need to make sure that the code is as abstract as possible so it could be used with any election data file. I would suggest making it easier for the user by adding to the code the following:
 - Give the user the ability to drag and drop the election file.
 - Generate analysis file based on the file that the user has dragged. 
 
@@ -252,16 +253,16 @@ Please check the modified code "PyPoll_Challenge.py" in the new branch named dyn
 https://github.com/MireyNM/Election_Analysis-/tree/dynamic
 
 ### Challenges 
-While going through the suggestions I mentioned above, I have faced the following challenges.:
+While going through the suggestions I mentioned above, I have faced the following challenges:
 
-1-  I noticed that when dragging the file an extra "'" was added to the file name therefore I removed it by adding the following to the code. 
+1-  I noticed that when dragging the file an extra **'** was added to the file name therefore I removed it by adding the following to the code. 
 
 ```
 if file_to_load[0] == "'":
     file_to_load = file_to_load[1:-1]
 ```
 
-2- I have tried to visualize the election results in bar charts. However, to be able to do that I should import the matplptlib module ```import matplotlib.pyplot as plt``` which gave this error ```ModuleNotFoundError: No module named 'matplotlib'```. It seems the module I need to draw charts doesn't exist to my Python version. The solution should be to install pip. More work and research are needed to be able to fix this issue.
+2- I have tried to visualize the election results in bar charts. However, to be able to do that I should import the matplptlib module ```import matplotlib.pyplot as plt``` which gave this error ```ModuleNotFoundError: No module named 'matplotlib'```. It seems the module I need in order to draw charts doesn't exist in my version of Python. The solution should be to install pip and use it to load the module. More work and research are needed to be able to fix this issue.
 
 
 
