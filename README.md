@@ -1,5 +1,4 @@
-# Election_Analysis-
-Module 3 in CU BootCamp 
+# Election_Analysis
 
 ## Project Overview 
 In this project, we are going to assist a Colorado Board of Elections employee, Tom, to complete the election audit of a recent local congressional election. To do that we need to do the following tasks: 
